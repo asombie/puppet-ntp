@@ -1,0 +1,11 @@
+#THIS IS THE STATIC CONTENT OF OUR TEMPLATE
+#IT DOES NOT HAVE ANYTHING TO DO WITH THE DYNAMIC CONTENT
+driftfile /var/lib/ntp/drift
+restrict 127.0.0.1
+includefile /etc/ntp/crypto/pw
+keys /etc/ntp/keys
+disable monitor
+
+<% @server.each do |server| -%>
+<%= server %>
+<% end -%>
